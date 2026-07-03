@@ -25,7 +25,9 @@ OrthoGuide/
 
 # 🏗 System Architecture
 
-```
+<div align="center">
+
+<pre>
                     ┌─────────────────────┐
                     │   React Dashboard   │
                     └──────────┬──────────┘
@@ -35,14 +37,15 @@ OrthoGuide/
           ┌────────────────────┼────────────────────┐
           │                    │                    │
           ▼                    ▼                    ▼
- Android App            Flask Backend         AI Assistant
-   Kotlin                 Python                 Ollama
+    Android App         Flask Backend       AI Assistant
+       Kotlin              Python              Ollama
           │                    │
           └──────────────┬─────┘
                          ▼
-                     MySQL Database
-```
+                   MySQL Database
+</pre>
 
+</div>
 ---
 
 # 📱 Modules
