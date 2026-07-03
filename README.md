@@ -332,7 +332,7 @@ https://github.com/Nravitejareddy
 
 # ⭐ Project Status
 
-✅ Active Development
+✅ Completed
 
 ---
 
