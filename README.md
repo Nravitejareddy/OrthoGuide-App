@@ -25,9 +25,7 @@ OrthoGuide/
 
 # 🏗 System Architecture
 
-<div align="center">
-
-<pre>
+```
                     ┌─────────────────────┐
                     │   React Dashboard   │
                     └──────────┬──────────┘
@@ -43,9 +41,7 @@ OrthoGuide/
           └──────────────┬─────┘
                          ▼
                    MySQL Database
-</pre>
-
-</div>
+```
 ---
 
 # 📱 Modules
