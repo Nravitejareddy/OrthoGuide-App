@@ -48,94 +48,41 @@ OrthoGuide/
 
 ## 📱 Android Mobile Application
 
-Native Android application developed using Kotlin following the MVVM architecture. It enables patients to manage their orthodontic treatment directly from their mobile devices.
-
-### Features
-
-- Patient Login & Registration
-- OTP Verification
-- AI Chat Assistant
-- Treatment Progress Monitoring
-- Appointment Tracking
-- Incident Reporting
-- Offline Data Support
-- Material Design UI
-
-### Technology
-
-- Kotlin
-- Android Studio
-- Retrofit
-- OkHttp
-- Gson
-- ViewBinding
-- Material Design 3
+| Description | Technologies |
+|------------|--------------|
+| Native Android application developed using the MVVM architecture, enabling patients to register, verify OTPs, communicate with the AI assistant, monitor treatment progress, manage appointments, report orthodontic issues, and access essential treatment information from their smartphones. | **Kotlin**, Android Studio, MVVM, Retrofit, OkHttp, Gson, ViewBinding, Material Design 3 |
 
 ---
 
 ## ⚙ Backend API
 
-The backend is built using Flask and serves as the central service layer responsible for authentication, AI interactions, patient management, appointments, reminders, and clinician operations.
-
-### Features
-
-- REST API
-- JWT Authentication
-- OTP Email Verification
-- AI Chatbot Integration
-- Automated Patient Reminders
-- Appointment Management
-- Incident Reporting
-- Dashboard Analytics
-
-### Technology
-
-- Python
-- Flask
-- Flask SQLAlchemy
-- Flask Bcrypt
-- Flask CORS
-- APScheduler
-- MySQL
-- Gunicorn
+| Description | Technologies |
+|------------|--------------|
+| Central Flask-based REST API responsible for authentication, clinician and patient management, appointment scheduling, AI chatbot integration, OTP verification, automated reminders, notifications, dashboard analytics, and secure database communication. | **Python**, Flask, Flask-SQLAlchemy, Flask-Bcrypt, Flask-CORS, APScheduler, MySQL, Gunicorn |
 
 ---
 
 ## 🌐 Web Dashboard
 
-Modern responsive dashboard developed using React and Vite for clinicians and administrators.
-
-### Features
-
-- Patient Dashboard
-- Clinician Dashboard
-- Appointment Management
-- Analytics
-- Treatment Monitoring
-- Responsive Interface
-
-### Technology
-
-- React
-- Vite
-- TailwindCSS
-- Axios
-- React Router
-- Framer Motion
-- Recharts
-- Radix UI
+| Description | Technologies |
+|------------|--------------|
+| Responsive React dashboard designed for clinicians and administrators to manage patients, monitor treatment progress, schedule appointments, visualize analytics, and oversee orthodontic workflows through a modern web interface. | **React**, Vite, TailwindCSS, Axios, React Router, Framer Motion, Recharts, Radix UI |
 
 ---
 
 ## 🔒 Privacy Policy
 
-Contains the public Privacy Policy required for deployment on Google Play Store.
+| Description |
+|------------|
+| Public privacy policy website published to comply with Google Play Developer Program requirements and explain how user information is collected, processed, stored, and protected. |
 
 ---
 
 ## 🗑 Account Deletion
 
-Dedicated webpage allowing users to request permanent deletion of their account in accordance with Google Play requirements.
+| Description |
+|------------|
+| Dedicated webpage allowing users to request permanent deletion of their OrthoGuide accounts in accordance with Google Play's User Data and Account Deletion policies. |
 
 ---
 
