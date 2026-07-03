@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Account - OrthoGuide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #10B981;
+            --primary-hover: #059669;
+            --bg: #F8FAFC;
+            --card-bg: #FFFFFF;
+            --text-main: #0F172A;
+            --text-muted: #64748B;
+            --border: #E2E8F0;
+            --input-bg: #FFFFFF;
+            --destructive: #EF4444;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0F172A;
+                --card-bg: #1E293B;
+                --text-main: #F1F5F9;
+                --text-muted: #94A3B8;
+                --border: #334155;
+                --input-bg: #0F172A;
+            }
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 95%;
+            max-width: 500px;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+
+        .logo-box {
+            position: relative;
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-text {
+            font-weight: 900;
+            font-size: 1.5rem;
+            letter-spacing: -0.025em;
+        }
+
+        .logo-text span {
+            color: var(--primary);
+        }
+
+        h1 {
+            color: var(--destructive);
+            margin-bottom: 20px;
+            font-size: 1.75rem;
+            font-weight: 800;
+        }
+
+        p {
+            color: var(--text-muted);
+            margin-bottom: 25px;
+            font-size: 1rem;
+        }
+
+        .warning-box {
+            background-color: rgba(239, 68, 68, 0.05);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .warning-box strong {
+            color: var(--destructive);
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .warning-box ul {
+            margin: 0;
+            padding-left: 20px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .form-group {
+            text-align: left;
+            margin-bottom: 16px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            color: var(--text-main);
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background-color: var(--input-bg);
+            color: var(--text-main);
+            box-sizing: border-box;
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            height: 80px;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background-color: var(--destructive);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.1s;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #DC2626;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        #success-message {
+            display: none;
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .success-icon {
+            color: var(--primary);
+            font-size: 3rem;
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <div class="logo-box">
+                <svg viewBox="0 0 100 100" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50,18 C35,18 20,15 20,35 C20,55 25,90 38,90 C45,90 47,78 50,78 C53,78 55,90 62,90 C75,90 80,55 80,35 C80,15 65,18 50,18 Z" fill="white"/>
+                    <ellipse cx="37" cy="45" rx="5" ry="9" fill="#10B981" />
+                    <ellipse cx="63" cy="45" rx="5" ry="9" fill="#10B981" />
+                    <path d="M38,62 C42,70 58,70 62,62" stroke="#10B981" stroke-width="6" stroke-linecap="round" />
+                </svg>
+            </div>
+            <div class="logo-text">Ortho<span>Guide</span></div>
+        </div>
+
+        <div id="delete-content">
+            <h1>Delete Account</h1>
+            <p>Please provide your details to request account deletion. This action is permanent.</p>
+            
+            <div class="warning-box">
+                <strong>Read Carefully:</strong>
+                <ul>
+                    <li>All clinical records will be archived safely.</li>
+                    <li>Access to the mobile application will be revoked.</li>
+                    <li>Deletion requests are processed within 48 hours.</li>
+                </ul>
+            </div>
+
+            <form id="delete-form" onsubmit="event.preventDefault(); document.getElementById('delete-content').style.display='none'; document.getElementById('success-message').style.display='block';">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="patientId">Patient ID</label>
+                    <input type="text" id="patientId" placeholder="Enter your Patient ID (e.g. OG-12345)" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Account Email</label>
+                    <input type="email" id="email" placeholder="Enter your registered email" required>
+                </div>
+                <div class="form-group">
+                    <label for="reason">Reason (Optional)</label>
+                    <textarea id="reason" placeholder="Optional: Let us know why you are leaving..."></textarea>
+                </div>
+                <button type="submit">Submit Deletion Request</button>
+            </form>
+        </div>
+
+        <div id="success-message">
+            <div class="success-icon">✓</div>
+            <h2 style="color: var(--text-main); margin-bottom: 16px;">Request Received</h2>
+            <p>Your deletion request has been logged. For security, please also send a confirmation email to <strong>support@orthoguide.com</strong> from your registered address.</p>
+            <p>Your account will be deactivated once verified.</p>
+        </div>
+
+        <div class="footer">
+            &copy; 2026 OrthoGuide Support
+        </div>
+    </div>
+</body>
+</html>
